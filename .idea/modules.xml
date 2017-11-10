@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CleanJavaAndroidArchi.iml" filepath="$PROJECT_DIR$/CleanJavaAndroidArchi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/use-case/data.iml" filepath="$PROJECT_DIR$/use-case/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity/domain.iml" filepath="$PROJECT_DIR$/entity/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity/entity.iml" filepath="$PROJECT_DIR$/entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface-adapters/interface-adapters.iml" filepath="$PROJECT_DIR$/interface-adapters/interface-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/use-case/use-case.iml" filepath="$PROJECT_DIR$/use-case/use-case.iml" />
     </modules>
   </component>
 </project>

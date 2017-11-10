@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerFragment;
 import rba.com.cleanjavaandroidarchi.app.di.ActivityScoped;
+import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleContract;
 
 /**
  * CleanJavaAndroidArchi
@@ -30,7 +31,7 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
 
     @Override
     public void onDestroy() {
-        mPresenter.dropView();
+        mPresenter.destroy();
         super.onDestroy();
     }
 
