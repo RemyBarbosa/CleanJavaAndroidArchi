@@ -10,12 +10,12 @@ import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
 import rba.com.cleanjavaandroidarchi.app.CleanJavaAndroidArchiApplication;
-import rba.com.cleanjavaandroidarchi.article.di.ArticleProviderModule;
+import rba.com.cleanjavaandroidarchi.article.di.ArticleModuleProvider;
 
 @Singleton
 @Component(
         modules = {
-                ArticleProviderModule.class,
+                ArticleModuleProvider.class,
                 ApplicationModule.class,
                 ActivityBindingModule.class,
                 AndroidSupportInjectionModule.class

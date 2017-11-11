@@ -12,7 +12,7 @@ import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleMapper;
 import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSource;
 
 @Module
-public class ArticleProviderModule {
+public class ArticleModuleProvider {
 
     @Singleton
     @Provides
