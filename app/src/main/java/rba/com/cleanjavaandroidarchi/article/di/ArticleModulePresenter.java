@@ -1,7 +1,5 @@
 package rba.com.cleanjavaandroidarchi.article.di;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import rba.com.cleanjavaandroidarchi.app.di.annotation.Remote;
@@ -14,22 +12,19 @@ import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSour
 @Module
 public class ArticleModulePresenter {
 
-    @Singleton
     @Provides
     ArticleDataSource provideArticleRepository(ArticleRepository articleRepository) {
         return articleRepository;
     }
 
-    @Singleton
     @Provides
     @Remote
-    ArticleDataSource provideArticleRemoteDataSource() {
-        return new ArticleRemoteDataSource();
+    ArticleDataSource provideArticleRemoteDataSource(ArticleRemoteDataSource articleRemoteDataSource) {
+        return articleRemoteDataSource;
     }
 
-    @Singleton
     @Provides
-    ArticleContract.Mapper provideArticleMapper() {
-        return new ArticleMapper();
+    ArticleContract.Mapper provideArticleMapper(ArticleMapper articleMapper) {
+        return articleMapper;
     }
 }

@@ -1,12 +1,11 @@
 package rba.com.cleanjavaandroidarchi.article.data;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import io.reactivex.Single;
+import rba.com.cleanjavaandroidarchi.app.di.annotation.Remote;
 import rba.com.cleanjavaandroidarchi.entity.Article;
 import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSource;
-import rba.com.cleanjavaandroidarchi.app.di.annotation.Remote;
 
 /**
  * CleanJavaAndroidArchi
@@ -14,7 +13,6 @@ import rba.com.cleanjavaandroidarchi.app.di.annotation.Remote;
  * Created by remybarbosa on 10/11/2017.
  */
 
-@Singleton
 public class ArticleRepository implements ArticleDataSource {
 
     private final ArticleDataSource mArticleRemoteDataSource;

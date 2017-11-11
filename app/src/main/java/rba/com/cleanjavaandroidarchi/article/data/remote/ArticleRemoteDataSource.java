@@ -11,7 +11,6 @@ import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSour
  *
  * Created by remybarbosa on 11/11/2017.
  */
-
 public class ArticleRemoteDataSource implements ArticleDataSource {
 
     private final ArticleRetrofitDataSource mArticleRetrofitDataSource;

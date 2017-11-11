@@ -1,10 +1,15 @@
 package rba.com.cleanjavaandroidarchi.interfaceadapters.article;
 
+import javax.inject.Inject;
+
 import rba.com.cleanjavaandroidarchi.entity.Article;
 import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleView;
 
-
 public class ArticleMapper implements ArticleContract.Mapper {
+
+    @Inject
+    public ArticleMapper() {
+    }
 
     @Override
     public ArticleView entityToViewModel(Article article) {
