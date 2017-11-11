@@ -14,11 +14,12 @@ public interface ArticleContract {
 
     interface Presenter extends BasePresenter<View> {
 
-        void fetchArticle(int number);
+        void showArticle(int articleNumber);
 
         void takeView(ArticleContract.View articleView);
 
         void destroy();
+
     }
     
     interface Mapper {

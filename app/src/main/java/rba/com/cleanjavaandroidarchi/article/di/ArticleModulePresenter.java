@@ -12,7 +12,7 @@ import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleMapper;
 import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSource;
 
 @Module
-public class ArticleModuleProvider {
+public class ArticleModulePresenter {
 
     @Singleton
     @Provides
@@ -27,11 +27,9 @@ public class ArticleModuleProvider {
         return new ArticleRemoteDataSource();
     }
 
-
     @Singleton
     @Provides
     ArticleContract.Mapper provideArticleMapper() {
         return new ArticleMapper();
     }
-
 }

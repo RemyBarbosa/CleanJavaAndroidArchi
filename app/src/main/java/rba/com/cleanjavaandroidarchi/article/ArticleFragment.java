@@ -24,6 +24,8 @@ import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleView
 @ActivityScoped
 public class ArticleFragment extends DaggerFragment implements ArticleContract.View {
 
+    @Inject
+    int articleNumber;
 
     @Inject
     ArticleContract.Presenter mPresenter;
@@ -60,7 +62,7 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        mPresenter.fetchArticle(631);
+        mPresenter.showArticle(articleNumber);
     }
 
     @Override

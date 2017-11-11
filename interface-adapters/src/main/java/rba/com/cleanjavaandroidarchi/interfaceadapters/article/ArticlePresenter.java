@@ -26,8 +26,8 @@ public class ArticlePresenter implements ArticleContract.Presenter {
     }
 
     @Override
-    public void fetchArticle(int number) {
-        disposables.add(mArticleManager.getArticle(number)
+    public void showArticle(int articleNumber) {
+        disposables.add(mArticleManager.getArticle(articleNumber)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSingleObserver<ArticleView>() {

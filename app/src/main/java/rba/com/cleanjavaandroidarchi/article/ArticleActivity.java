@@ -11,15 +11,20 @@ import rba.com.cleanjavaandroidarchi.util.ActivityUtils;
 
 public class ArticleActivity extends DaggerAppCompatActivity {
 
+    public static final String EXTRA_ARTICLE_NUMBER = "ARTICLE_NUMBER";
+
     @Inject
     ArticleFragment injectedFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        fromCallingActivity();
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_article);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         ArticleFragment taskDetailFragment = (ArticleFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.contentFrame);
@@ -29,5 +34,10 @@ public class ArticleActivity extends DaggerAppCompatActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                     taskDetailFragment, R.id.contentFrame);
         }
+
+    }
+
+    private void fromCallingActivity() {
+        getIntent().putExtra(EXTRA_ARTICLE_NUMBER, 631);
     }
 }
