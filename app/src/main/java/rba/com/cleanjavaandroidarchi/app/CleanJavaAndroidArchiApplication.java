@@ -3,6 +3,7 @@ package rba.com.cleanjavaandroidarchi.app;
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 import rba.com.cleanjavaandroidarchi.app.di.AppComponent;
+import rba.com.cleanjavaandroidarchi.app.di.DaggerAppComponent;
 
 /**
  * CleanJavaAndroidArchi

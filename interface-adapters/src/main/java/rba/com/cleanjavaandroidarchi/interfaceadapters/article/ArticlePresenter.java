@@ -33,7 +33,6 @@ public class ArticlePresenter implements ArticleContract.Presenter {
                 .subscribeWith(new DisposableSingleObserver<ArticleView>() {
                     @Override
                     public final void onError(final Throwable e) {
-
                     }
 
                     @Override

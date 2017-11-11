@@ -1,7 +1,8 @@
 package rba.com.cleanjavaandroidarchi.entity;
 
-import java.util.Calendar;
-import java.util.Date;
+import com.google.gson.annotations.SerializedName;
+
+import org.joda.time.DateTime;
 
 /**
  * CleanJavaAndroidArchi
@@ -14,19 +15,19 @@ public class Article {
     private static final int NB_DAY_TO_WAIT_BEFORE_PUBLICATION = 1;
 
     private final String title;
+    @SerializedName("body")
     private final String content;
-    private final Date releaseDate;
+    @SerializedName("created_at")
+    private final DateTime releaseDate;
 
-    public Article(String title, String content, Date releaseDate) {
+    public Article(String title, String content, DateTime releaseDate) {
         this.title = title;
         this.content = content;
         this.releaseDate = releaseDate;
     }
 
     public boolean isPublishable() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_MONTH, -NB_DAY_TO_WAIT_BEFORE_PUBLICATION);
-        return releaseDate.before(calendar.getTime());
+        return releaseDate.isBefore(DateTime.now().minusDays(NB_DAY_TO_WAIT_BEFORE_PUBLICATION));
     }
 
     public String getTitle() {
@@ -37,7 +38,7 @@ public class Article {
         return content;
     }
 
-    public Date getReleaseDate() {
+    public DateTime getReleaseDate() {
         return releaseDate;
     }
 }

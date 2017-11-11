@@ -1,10 +1,12 @@
-package rba.com.cleanjavaandroidarchi.app.di;
+package rba.com.cleanjavaandroidarchi.app.di.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 import javax.inject.Scope;
+
+import rba.com.cleanjavaandroidarchi.app.di.AppComponent;
 
 /**
  * In Dagger, an unscoped component cannot depend on a scoped component. As

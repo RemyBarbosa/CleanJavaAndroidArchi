@@ -5,6 +5,7 @@ import javax.inject.Inject;
 
 import io.reactivex.Single;
 import rba.com.cleanjavaandroidarchi.entity.Article;
+import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSource;
 
 /**
  * CleanJavaAndroidArchi
@@ -14,14 +15,14 @@ import rba.com.cleanjavaandroidarchi.entity.Article;
 
 public class GetArticleUseCase {
 
-    private final GetArticle mGetArticle;
+    private final ArticleDataSource mArticleDataSource;
 
     @Inject
-    public GetArticleUseCase(GetArticle getArticle) {
-        mGetArticle = getArticle;
+    public GetArticleUseCase(ArticleDataSource articleDataSource) {
+        mArticleDataSource = articleDataSource;
     }
 
     public Single<Article> execute(int number) {
-        return mGetArticle.getArticle(number);
+        return mArticleDataSource.getArticle(number);
     }
 }

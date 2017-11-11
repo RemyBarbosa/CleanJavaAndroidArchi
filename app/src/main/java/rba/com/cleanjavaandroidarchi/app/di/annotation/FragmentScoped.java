@@ -1,4 +1,4 @@
-package rba.com.cleanjavaandroidarchi.app.di;
+package rba.com.cleanjavaandroidarchi.app.di.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
