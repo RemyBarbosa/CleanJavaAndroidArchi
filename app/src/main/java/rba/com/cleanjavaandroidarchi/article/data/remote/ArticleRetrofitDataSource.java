@@ -3,7 +3,7 @@ package rba.com.cleanjavaandroidarchi.article.data.remote;
 import com.google.gson.Gson;
 
 import io.reactivex.Flowable;
-import rba.com.cleanjavaandroidarchi.entity.Article;
+import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleRemoteModel;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -21,7 +21,7 @@ import static rba.com.cleanjavaandroidarchi.util.GsonBuilder.getGson;
 public interface ArticleRetrofitDataSource {
 
     @GET("/repos/vmg/redcarpet/issues/{number}")
-    Flowable<Article> getArticle(@Path("number") int number);
+    Flowable<ArticleRemoteModel> getArticle(@Path("number") int number);
 
     class Creator {
 

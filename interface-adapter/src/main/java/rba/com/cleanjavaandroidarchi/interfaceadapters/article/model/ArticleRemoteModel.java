@@ -1,4 +1,6 @@
-package rba.com.cleanjavaandroidarchi.entity;
+package rba.com.cleanjavaandroidarchi.interfaceadapters.article.model;
+
+import com.google.gson.annotations.SerializedName;
 
 import org.joda.time.DateTime;
 
@@ -8,22 +10,17 @@ import org.joda.time.DateTime;
  * Created by remybarbosa on 09/11/2017.
  */
 
-public class Article {
-
-    private static final int NB_DAY_TO_WAIT_BEFORE_PUBLICATION = 1;
+public class ArticleRemoteModel {
 
     private final String title;
     private final String url;
+    @SerializedName("created_at")
     private final DateTime creationDate;
 
-    public Article(String title, String url, DateTime creationDate) {
+    public ArticleRemoteModel(String title, String url, DateTime creationDate) {
         this.title = title;
         this.url = url;
         this.creationDate = creationDate;
-    }
-
-    public boolean isReleasable() {
-        return creationDate.isBefore(DateTime.now().minusDays(NB_DAY_TO_WAIT_BEFORE_PUBLICATION));
     }
 
     public String getTitle() {
