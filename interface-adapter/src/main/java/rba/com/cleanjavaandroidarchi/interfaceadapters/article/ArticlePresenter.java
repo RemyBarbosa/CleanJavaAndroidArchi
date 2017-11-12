@@ -48,6 +48,4 @@ public class ArticlePresenter implements ArticleContract.Presenter {
         mView = null;
     }
 
-    // https://api.github.com/repos/vmg/redcarpet/issues/631
-
 }

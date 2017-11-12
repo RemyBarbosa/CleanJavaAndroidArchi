@@ -25,7 +25,7 @@ public interface ArticleRetrofitDataSource {
 
     class Creator {
 
-        public static ArticleRetrofitDataSource newArticleRemoteDataSource() {
+        public static ArticleRetrofitDataSource newArticleRetrofitDataSource() {
             final Gson gson = getGson();
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://api.github.com")

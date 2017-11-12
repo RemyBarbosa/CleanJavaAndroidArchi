@@ -1,4 +1,4 @@
-package rba.com.cleanjavaandroidarchi.article.data.remote;
+package rba.com.cleanjavaandroidarchi.article.data.database;
 
 import org.joda.time.DateTime;
 

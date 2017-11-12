@@ -2,7 +2,7 @@ package rba.com.cleanjavaandroidarchi.article.di;
 
 import dagger.Module;
 import dagger.Provides;
-import rba.com.cleanjavaandroidarchi.article.data.remote.ArticleLocalDataSource;
+import rba.com.cleanjavaandroidarchi.article.data.database.ArticleLocalDataSource;
 import rba.com.cleanjavaandroidarchi.usecase.di.annotation.Local;
 import rba.com.cleanjavaandroidarchi.usecase.di.annotation.Remote;
 import rba.com.cleanjavaandroidarchi.usecase.article.data.ArticleRepository;

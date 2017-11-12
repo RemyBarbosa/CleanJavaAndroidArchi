@@ -17,7 +17,7 @@ public class ArticleRemoteDataSource implements ArticleDataSource {
 
     @Inject
     public ArticleRemoteDataSource() {
-        mArticleRetrofitDataSource = ArticleRetrofitDataSource.Creator.newArticleRemoteDataSource();
+        mArticleRetrofitDataSource = ArticleRetrofitDataSource.Creator.newArticleRetrofitDataSource();
     }
 
     @Override
