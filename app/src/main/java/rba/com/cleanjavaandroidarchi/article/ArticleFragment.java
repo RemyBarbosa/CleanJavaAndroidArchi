@@ -38,12 +38,10 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        final View fragmentView = inflater.inflate(R.layout.fragment_article, container, false);
-        bindViews(fragmentView);
-        return fragmentView;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_article, container, false);
     }
+
 
     private void bindViews(View fragmentView) {
         mArticleDetailView = fragmentView.findViewById(R.id.article_detail);
@@ -63,6 +61,7 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        bindViews(view);
         mPresenter.showArticle(articleNumber);
     }
 
