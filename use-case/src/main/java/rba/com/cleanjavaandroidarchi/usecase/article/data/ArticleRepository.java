@@ -29,6 +29,5 @@ public class ArticleRepository implements ArticleDataSource {
     @Override
     public Flowable<Article> getArticle(int number) {
         return mArticleRemoteDataSource.getArticle(number).startWith(mArticleLocalDataSource.getArticle(number));
-//        return mArticleLocalDataSource.getArticle(number).mergeWith(mArticleRemoteDataSource.getArticle(number));
     }
 }
