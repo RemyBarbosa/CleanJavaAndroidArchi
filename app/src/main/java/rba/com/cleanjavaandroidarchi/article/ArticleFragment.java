@@ -13,7 +13,7 @@ import dagger.android.support.DaggerFragment;
 import rba.com.cleanjavaandroidarchi.R;
 import rba.com.cleanjavaandroidarchi.app.di.annotation.ActivityScoped;
 import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleContract;
-import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleView;
+import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleViewModel;
 
 /**
  * CleanJavaAndroidArchi
@@ -34,6 +34,7 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
 
     @Inject
     public ArticleFragment() {
+        // Needed empty constructor for dependency injection
     }
 
     @Override
@@ -66,16 +67,16 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
     }
 
     @Override
-    public void showArticle(ArticleView articleView) {
+    public void showArticle(ArticleViewModel articleViewModel) {
         mArticleDetailView.setText(
                 String.format("%s%n"
                                 + "%n"
                                 + "%s%n"
                                 + "%n"
                                 + "%s",
-                        articleView.getTitle(),
-                        articleView.getContent(),
-                        articleView.getReleaseDate())
+                        articleViewModel.getTitle(),
+                        articleViewModel.getContent(),
+                        articleViewModel.getReleaseDate())
         );
     }
 }

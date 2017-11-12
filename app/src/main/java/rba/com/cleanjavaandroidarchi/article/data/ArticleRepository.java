@@ -12,7 +12,6 @@ import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSour
  *
  * Created by remybarbosa on 10/11/2017.
  */
-
 public class ArticleRepository implements ArticleDataSource {
 
     private final ArticleDataSource mArticleRemoteDataSource;

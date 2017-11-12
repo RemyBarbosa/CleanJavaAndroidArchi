@@ -8,7 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableSingleObserver;
 import io.reactivex.schedulers.Schedulers;
-import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleView;
+import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleViewModel;
 
 public class ArticlePresenter implements ArticleContract.Presenter {
 
@@ -30,14 +30,14 @@ public class ArticlePresenter implements ArticleContract.Presenter {
         disposables.add(mArticleManager.getArticle(articleNumber)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSingleObserver<ArticleView>() {
+                .subscribeWith(new DisposableSingleObserver<ArticleViewModel>() {
                     @Override
                     public final void onError(final Throwable e) {
                     }
 
                     @Override
-                    public final void onSuccess(final ArticleView articleView) {
-                        mView.showArticle(articleView);
+                    public final void onSuccess(final ArticleViewModel articleViewModel) {
+                        mView.showArticle(articleViewModel);
                     }
                 }));
     }

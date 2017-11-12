@@ -6,12 +6,12 @@ package rba.com.cleanjavaandroidarchi.interfaceadapters.article.model;
  * Created by remybarbosa on 09/11/2017.
  */
 
-public class ArticleView {
+public class ArticleViewModel {
     private final String title;
     private final String content;
     private final String releaseDate;
 
-    public ArticleView(String title, String content, String releaseDate) {
+    public ArticleViewModel(String title, String content, String releaseDate) {
         this.title = title;
         this.content = content;
         this.releaseDate = releaseDate;

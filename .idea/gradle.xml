@@ -10,7 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/entity" />
-            <option value="$PROJECT_DIR$/interface-adapters" />
+            <option value="$PROJECT_DIR$/interface-adapter" />
             <option value="$PROJECT_DIR$/use-case" />
           </set>
         </option>

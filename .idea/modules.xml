@@ -7,7 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/use-case/data.iml" filepath="$PROJECT_DIR$/use-case/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/entity/domain.iml" filepath="$PROJECT_DIR$/entity/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/entity/entity.iml" filepath="$PROJECT_DIR$/entity/entity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/interface-adapters/interface-adapters.iml" filepath="$PROJECT_DIR$/interface-adapters/interface-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface-adapter/interface-adapters.iml" filepath="$PROJECT_DIR$/interface-adapter/interface-adapters.iml" />
       <module fileurl="file://$PROJECT_DIR$/use-case/use-case.iml" filepath="$PROJECT_DIR$/use-case/use-case.iml" />
     </modules>
   </component>
