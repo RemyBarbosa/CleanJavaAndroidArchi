@@ -19,7 +19,8 @@ public class ArticleRepository implements ArticleDataSource {
     private final ArticleDataSource mArticleLocalDataSource;
 
     @Inject
-    public ArticleRepository(@Remote ArticleDataSource articleRemoteDataSource,
+    public ArticleRepository(
+            @Remote ArticleDataSource articleRemoteDataSource,
             @Local ArticleDataSource articleLocalDataSource) {
         mArticleRemoteDataSource = articleRemoteDataSource;
         mArticleLocalDataSource = articleLocalDataSource;
