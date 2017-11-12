@@ -8,12 +8,12 @@ package rba.com.cleanjavaandroidarchi.interfaceadapters.article.model;
 
 public class ArticleViewModel {
     private final String title;
-    private final String content;
+    private final String url;
     private final String creationDate;
 
-    public ArticleViewModel(String title, String content, String creationDate) {
+    public ArticleViewModel(String title, String url, String creationDate) {
         this.title = title;
-        this.content = content;
+        this.url = url;
         this.creationDate = creationDate;
     }
 
@@ -21,8 +21,8 @@ public class ArticleViewModel {
         return title;
     }
 
-    public String getContent() {
-        return content;
+    public String getUrl() {
+        return url;
     }
 
     public String getCreationDate() {

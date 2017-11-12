@@ -15,14 +15,13 @@ public class Article {
     private static final int NB_DAY_TO_WAIT_BEFORE_PUBLICATION = 1;
 
     private final String title;
-    @SerializedName("body")
-    private final String content;
+    private final String url;
     @SerializedName("created_at")
     private final DateTime creationDate;
 
-    public Article(String title, String content, DateTime creationDate) {
+    public Article(String title, String url, DateTime creationDate) {
         this.title = title;
-        this.content = content;
+        this.url = url;
         this.creationDate = creationDate;
     }
 
@@ -34,8 +33,8 @@ public class Article {
         return title;
     }
 
-    public String getContent() {
-        return content;
+    public String getUrl() {
+        return url;
     }
 
     public DateTime getCreationDate() {

@@ -1,16 +1,17 @@
 package rba.com.cleanjavaandroidarchi.interfaceadapters.article;
 
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.observers.DisposableSingleObserver;
 import io.reactivex.schedulers.Schedulers;
-import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleViewModel;
 
 public class ArticlePresenter implements ArticleContract.Presenter {
+
+    private static final String TAG = ArticlePresenter.class.getSimpleName();
 
     private CompositeDisposable disposables;
 
@@ -30,16 +31,10 @@ public class ArticlePresenter implements ArticleContract.Presenter {
         disposables.add(mArticleManager.getArticle(articleNumber)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSingleObserver<ArticleViewModel>() {
-                    @Override
-                    public final void onError(final Throwable e) {
-                    }
-
-                    @Override
-                    public final void onSuccess(final ArticleViewModel articleViewModel) {
-                        mView.showArticle(articleViewModel);
-                    }
-                }));
+                .subscribe(
+                        articleViewModel -> mView.showArticle(articleViewModel),
+                        e -> Log.e(TAG, "showArticle: ", e)
+                ));
     }
 
     @Override

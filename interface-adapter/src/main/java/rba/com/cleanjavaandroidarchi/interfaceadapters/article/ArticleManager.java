@@ -2,7 +2,7 @@ package rba.com.cleanjavaandroidarchi.interfaceadapters.article;
 
 import javax.inject.Inject;
 
-import io.reactivex.Single;
+import io.reactivex.Flowable;
 import rba.com.cleanjavaandroidarchi.interfaceadapters.article.model.ArticleViewModel;
 import rba.com.cleanjavaandroidarchi.usecase.article.GetArticleUseCase;
 
@@ -19,7 +19,7 @@ public class ArticleManager {
         mMapper = mapper;
     }
 
-    public Single<ArticleViewModel> getArticle(int number) {
+    public Flowable<ArticleViewModel> getArticle(int number) {
         return mGetArticleUseCase.execute(number).map(mMapper::entityToViewModel);
     }
 }

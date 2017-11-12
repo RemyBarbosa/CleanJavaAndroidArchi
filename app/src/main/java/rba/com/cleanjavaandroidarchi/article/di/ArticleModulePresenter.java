@@ -2,8 +2,10 @@ package rba.com.cleanjavaandroidarchi.article.di;
 
 import dagger.Module;
 import dagger.Provides;
-import rba.com.cleanjavaandroidarchi.app.di.annotation.Remote;
-import rba.com.cleanjavaandroidarchi.article.data.ArticleRepository;
+import rba.com.cleanjavaandroidarchi.article.data.remote.ArticleLocalDataSource;
+import rba.com.cleanjavaandroidarchi.usecase.di.annotation.Local;
+import rba.com.cleanjavaandroidarchi.usecase.di.annotation.Remote;
+import rba.com.cleanjavaandroidarchi.usecase.article.data.ArticleRepository;
 import rba.com.cleanjavaandroidarchi.article.data.remote.ArticleRemoteDataSource;
 import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleContract;
 import rba.com.cleanjavaandroidarchi.interfaceadapters.article.ArticleMapper;
@@ -21,6 +23,12 @@ public class ArticleModulePresenter {
     @Remote
     ArticleDataSource provideArticleRemoteDataSource(ArticleRemoteDataSource articleRemoteDataSource) {
         return articleRemoteDataSource;
+    }
+
+    @Provides
+    @Local
+    ArticleDataSource provideArticleLocalDataSource(ArticleLocalDataSource articleLocalDataSource) {
+        return articleLocalDataSource;
     }
 
     @Provides

@@ -3,7 +3,7 @@ package rba.com.cleanjavaandroidarchi.usecase.article;
 
 import javax.inject.Inject;
 
-import io.reactivex.Single;
+import io.reactivex.Flowable;
 import rba.com.cleanjavaandroidarchi.entity.Article;
 import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSource;
 
@@ -22,7 +22,7 @@ public class GetArticleUseCase {
         mArticleDataSource = articleDataSource;
     }
 
-    public Single<Article> execute(int number) {
+    public Flowable<Article> execute(int number) {
         return mArticleDataSource.getArticle(number);
     }
 }

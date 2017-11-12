@@ -1,5 +1,7 @@
 package rba.com.cleanjavaandroidarchi.article.data.remote;
 
+import org.joda.time.DateTime;
+
 import javax.inject.Inject;
 
 import io.reactivex.Flowable;
@@ -11,17 +13,13 @@ import rba.com.cleanjavaandroidarchi.usecase.article.data.source.ArticleDataSour
  *
  * Created by remybarbosa on 11/11/2017.
  */
-public class ArticleRemoteDataSource implements ArticleDataSource {
-
-    private final ArticleRetrofitDataSource mArticleRetrofitDataSource;
+public class ArticleLocalDataSource implements ArticleDataSource {
 
     @Inject
-    public ArticleRemoteDataSource() {
-        mArticleRetrofitDataSource = ArticleRetrofitDataSource.Creator.newArticleRemoteDataSource();
-    }
+    public ArticleLocalDataSource() {}
 
     @Override
     public Flowable<Article> getArticle(int number) {
-        return mArticleRetrofitDataSource.getArticle(number);
+        return Flowable.just(new Article("title", "http://www.foo.com", DateTime.now()));
     }
 }

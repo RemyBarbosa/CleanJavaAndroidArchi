@@ -1,6 +1,6 @@
 package rba.com.cleanjavaandroidarchi.usecase.article.data.source;
 
-import io.reactivex.Single;
+import io.reactivex.Flowable;
 import rba.com.cleanjavaandroidarchi.entity.Article;
 
 /**
@@ -10,5 +10,5 @@ import rba.com.cleanjavaandroidarchi.entity.Article;
  */
 
 public interface ArticleDataSource {
-    Single<Article> getArticle(int number);
+    Flowable<Article> getArticle(int number);
 }
