@@ -18,16 +18,16 @@ public class Article {
     @SerializedName("body")
     private final String content;
     @SerializedName("created_at")
-    private final DateTime releaseDate;
+    private final DateTime creationDate;
 
-    public Article(String title, String content, DateTime releaseDate) {
+    public Article(String title, String content, DateTime creationDate) {
         this.title = title;
         this.content = content;
-        this.releaseDate = releaseDate;
+        this.creationDate = creationDate;
     }
 
-    public boolean isPublishable() {
-        return releaseDate.isBefore(DateTime.now().minusDays(NB_DAY_TO_WAIT_BEFORE_PUBLICATION));
+    public boolean isReleasable() {
+        return creationDate.isBefore(DateTime.now().minusDays(NB_DAY_TO_WAIT_BEFORE_PUBLICATION));
     }
 
     public String getTitle() {
@@ -38,7 +38,7 @@ public class Article {
         return content;
     }
 
-    public DateTime getReleaseDate() {
-        return releaseDate;
+    public DateTime getCreationDate() {
+        return creationDate;
     }
 }

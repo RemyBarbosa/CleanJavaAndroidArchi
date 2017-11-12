@@ -76,7 +76,7 @@ public class ArticleFragment extends DaggerFragment implements ArticleContract.V
                                 + "%s",
                         articleViewModel.getTitle(),
                         articleViewModel.getContent(),
-                        articleViewModel.getReleaseDate())
+                        articleViewModel.getCreationDate())
         );
     }
 }

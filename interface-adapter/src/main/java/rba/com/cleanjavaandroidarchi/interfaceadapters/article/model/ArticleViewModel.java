@@ -9,12 +9,12 @@ package rba.com.cleanjavaandroidarchi.interfaceadapters.article.model;
 public class ArticleViewModel {
     private final String title;
     private final String content;
-    private final String releaseDate;
+    private final String creationDate;
 
-    public ArticleViewModel(String title, String content, String releaseDate) {
+    public ArticleViewModel(String title, String content, String creationDate) {
         this.title = title;
         this.content = content;
-        this.releaseDate = releaseDate;
+        this.creationDate = creationDate;
     }
 
     public String getTitle() {
@@ -25,7 +25,7 @@ public class ArticleViewModel {
         return content;
     }
 
-    public String getReleaseDate() {
-        return releaseDate;
+    public String getCreationDate() {
+        return creationDate;
     }
 }

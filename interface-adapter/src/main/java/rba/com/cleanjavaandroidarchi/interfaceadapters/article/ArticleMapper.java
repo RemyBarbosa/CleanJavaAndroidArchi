@@ -13,6 +13,6 @@ public class ArticleMapper implements ArticleContract.Mapper {
 
     @Override
     public ArticleViewModel entityToViewModel(Article article) {
-        return new ArticleViewModel(article.getTitle(), article.getContent().substring(0, 50), article.getReleaseDate().toString());
+        return new ArticleViewModel(article.getTitle(), article.getContent().substring(0, 50), article.getCreationDate().toString());
     }
 }
