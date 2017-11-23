@@ -1,27 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'project-report'
+apply from: '../config/android-common.gradle'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
-    defaultConfig {
-        applicationId "rba.com.cleanjavaandroidarchi"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    compileOptions {
-        targetCompatibility rootProject.ext.compatibilityVersion
-        sourceCompatibility rootProject.ext.compatibilityVersion
     }
 
     packagingOptions {

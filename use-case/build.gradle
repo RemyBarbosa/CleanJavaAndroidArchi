@@ -1,14 +1,5 @@
 apply plugin: 'com.android.library'
-
-android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
-    defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-
-    }
-}
+apply from: '../config/android-common.gradle'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

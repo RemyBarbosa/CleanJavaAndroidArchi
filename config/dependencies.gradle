@@ -6,11 +6,6 @@ allprojects {
 }
 
 ext {
-    compileSdkVersion = 27
-    targetSdkVersion = compileSdkVersion
-    minSdkVersion = 19
-    compatibilityVersion = 1.8
-
     rxJavaVersion = "2.1.3"
     rxAndroidVersion = "2.0.1"
 
