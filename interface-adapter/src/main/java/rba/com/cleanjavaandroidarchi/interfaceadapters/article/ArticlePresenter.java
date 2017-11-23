@@ -1,6 +1,5 @@
 package rba.com.cleanjavaandroidarchi.interfaceadapters.article;
 
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import javax.inject.Inject;
@@ -15,7 +14,6 @@ public class ArticlePresenter implements ArticleContract.Presenter {
 
     private CompositeDisposable disposables;
 
-    @Nullable
     private ArticleContract.View mView;
 
     private final ArticleManager mArticleManager;
