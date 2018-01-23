@@ -10,7 +10,7 @@ ext {
     rxAndroidVersion = "2.0.1"
 
     constraintLayoutVersion = "1.0.2"
-    supportLibraryVersion = "27.0.1"
+    supportLibraryVersion = "27.0.2"
     daggerVersion = "2.11"
     retrofitVersion = "2.3.0"
     jodaTimeVersion = "2.9.9"
